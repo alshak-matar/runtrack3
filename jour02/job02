@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemple d'apparition/disparition d'un article</title>
+  <style>
+    #article {
+      display: none;
+    }
+  </style>
+  <script>
+    function showhide() {
+      var article = document.getElementById("article");
+      
+      if (article.style.display === "none") {
+        article.style.display = "block";
+      } else {
+        article.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <button id="button" onclick="showhide()">Afficher l'article</button>
+
+  <article id="article">
+    <p>"L'important n'est pas la chute, mais l'atterrissage."</p>
+  </article>
+</body>
+</html>
