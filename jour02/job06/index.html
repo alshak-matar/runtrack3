@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stylisation Konami</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    const konamiCode = [
+      'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
+      'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
+      'b', 'a'
+    ];
+    let konamiIndex = 0;
+  
+    function handleKonamiCode(event) {
+      const key = event.key;
+  
+      if (key === konamiCode[konamiIndex]) {
+        konamiIndex++;
+  
+        if (konamiIndex === konamiCode.length) {
+          document.body.classList.add('la-plateforme');
+          konamiIndex = 0;
+        }
+      } else {
+        konamiIndex = 0;
+      }
+    }
+  
+    document.addEventListener('keydown', handleKonamiCode);
+  </script>
+  
+</head>
+<body>
+    <h1>Bienvenue sur La Plateforme</h1>
+    <p>Ce site est stylisé aux couleurs de La Plateforme.</p>
+    
+</body>
+</html>
