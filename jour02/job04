@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keylogger</title>
+  <script>
+    function handleKeyPress(event) {
+      var key = event.key;
+      var textarea = document.getElementById("keylogger");
+
+      if (textarea === document.activeElement) {
+        textarea.value += key + key;
+      } else {
+        textarea.value += key;
+      }
+    }
+  </script>
+</head>
+<body>
+  <textarea id="keylogger" onkeypress="handleKeyPress(event)"></textarea>
+</body>
+</html>
