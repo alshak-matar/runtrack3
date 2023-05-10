@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemple de compteur de clics</title>
+  <script>
+    var count = 0;
+
+    function addone() {
+      count++;
+      var compteur = document.getElementById("compteur");
+      compteur.textContent = count;
+    }
+  </script>
+</head>
+<body>
+  <button id="button" onclick="addone()">Cliquez ici</button>
+  <p id="compteur">0</p>
+</body>
+</html>
