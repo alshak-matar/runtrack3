@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemple d'affichage et de masquage d'un élément HTML</title>
+</head>
+<body>
+  <button id="showButton">Afficher le texte</button>
+  <p id="quote" style="display: none;">"Les logiciels et les cathédrales, c'est un peu la même chose - d'abord on les construit, ensuite on prie."</p>
+  <button id="hideButton" style="display: none;">Cacher le texte</button>
+
+  <script>
+    var showButton = document.getElementById("showButton");
+    var hideButton = document.getElementById("hideButton");
+    var quote = document.getElementById("quote");
+
+    showButton.addEventListener("click", function() {
+      quote.style.display = "block";
+      showButton.style.display = "none";
+      hideButton.style.display = "block";
+    });
+
+    hideButton.addEventListener("click", function() {
+      quote.style.display = "none";
+      showButton.style.display = "block";
+      hideButton.style.display = "none";
+    });
+  </script>
+</body>
+</html>
