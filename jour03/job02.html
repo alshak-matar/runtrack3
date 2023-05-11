@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemple de jeu d'arc-en-ciel</title>
+  <style>
+    .rainbow-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .rainbow-container img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .message {
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <button id="shuffleButton">Mélanger</button>
+  <div class="rainbow-container">
+    <img src="image1.jpg" id="image1">
+    <img src="image2.jpg" id="image2">
+    <img src="image3.jpg" id="image3">
+    <img src="image4.jpg" id="image4">
+    <img src="image5.jpg" id="image5">
+    <img src="image6.jpg" id="image6">
+  </div>
+  <div class="message" id="message"></div>
+
+  <script>
+    var shuffleButton = document.getElementById("shuffleButton");
+    var message = document.getElementById("message");
+    var rainbowContainer = document.querySelector(".rainbow-container");
+
+    shuffleButton.addEventListener("click", function() {
+      shuffleRainbow();
+    });
+
+    rainbowContainer.addEventListener("dragstart", function(event) {
+      event.dataTransfer.setData("text/plain", event.target.id);
+    });
+
+    rainbowContainer.addEventListener("dragover", function(event) {
+      event.preventDefault();
+    });
+
+    rainbowContainer.addEventListener("drop", function(event) {
+      event.preventDefault();
+      var sourceId = event.dataTransfer.getData("text/plain");
+      var sourceElement = document.getElementById(sourceId);
+      var targetElement = event.target;
+
+      if (targetElement.tagName === "IMG") {
+        targetElement.parentNode.insertBefore(sourceElement, targetElement);
+        checkRainbowOrder();
+      }
+    });
+
+    function shuffleRainbow() {
+      var images = rainbowContainer.querySelectorAll("img");
+      var fragment = document.createDocumentFragment();
+
+      while (images.length) {
+        fragment.appendChild(images[Math.floor(Math.random() * images.length)]);
+      }
+
+      rainbowContainer.appendChild(fragment);
+    }
+
+    function checkRainbowOrder() {
+      var images = rainbowContainer.querySelectorAll("img");
+      var isCorrectOrder = true;
+
+      for (var i = 0; i < images.length - 1; i++) {
+        if (images[i].id !== "image" + (i + 1)) {
+          isCorrectOrder = false;
+          break;
+        }
+      }
+
+      if (isCorrectOrder) {
+        message.textContent = "Vous avez gagné";
+        message.style.color = "green";
+      } else {
+        message.textContent = "Vous avez perdu";
+        message.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
