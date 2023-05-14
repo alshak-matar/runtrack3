@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fetch Example</title>
+</head>
+<body>
+  <button id="button">Cliquez ici</button>
+  <p id="result"></p>
+
+  <script>
+    const button = document.getElementById('button');
+    const resultParagraph = document.getElementById('result');
+
+    button.addEventListener('click', () => {
+      fetch('expression.txt')
+        .then(response => response.text())
+        .then(data => {
+          resultParagraph.innerText = data;
+        })
+        .catch(error => {
+          console.log('Une erreur s\'est produite:', error);
+        });
+    });
+  </script>
+</body>
+</html>
