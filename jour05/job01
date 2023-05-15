@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ma page</title>
+
+  <style>
+    
+    body {
+      background-color: #88c1d0;
+    }
+  </style>
+
+  <link rel="stylesheet" media="screen and (min-width: 1680px) and (max-width: 1920px)" href="style2.css">
+
+  <link rel="stylesheet" media="screen and (min-width: 1280px) and (max-width: 1680px)" href="style3.css">
+
+  <link rel="stylesheet" media="screen and (max-width: 1280px)" href="style4.css">
+</head>
+<body>
+  <h1>Hello world<h2>
+</body>
+</html>
