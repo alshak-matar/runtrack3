@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ma page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+  <header class="teal lighten-2">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="inscription.html">Inscription</a></li>
+          <li><a href="connexion.html">Connexion</a></li>
+          <li><a href="rechercher.html">Rechercher</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container">
+      <form>
+        <p>
+          <label>
+            <input type="radio" name="civility" value="mr">
+            <span>Monsieur</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="radio" name="civility" value="mrs">
+            <span>Madame</span>
+          </label>
+        </p>
+        <div class="input-field">
+          <input type="text" id="first-name" name="first-name">
+          <label for="first-name">Prénom</label>
+        </div>
+        <div class="input-field">
+          <input type="text" id="last-name" name="last-name">
+          <label for="last-name">Nom</label>
+        </div>
+        <div class="input-field">
+          <input type="text" id="address" name="address">
+          <label for="address">Adresse</label>
+        </div>
+        <div class="input-field">
+          <input type="email" id="email" name="email">
+          <label for="email">Adresse email</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password" name="password">
+          <label for="password">Mot de passe</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="confirm-password" name="confirm-password">
+          <label for="confirm-password">Confirmer le mot de passe</label>
+        </div>
+        <p>
+          <label>
+            <input type="checkbox" name="hobbies" value="informatique">
+            <span>Informatique</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="hobbies" value="voyages">
+            <span>Voyages</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="hobbies" value="sport">
+            <span>Sport</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="hobbies" value="lecture">
+            <span>Lecture</span>
+          </label>
+        </p>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Valider</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="teal lighten-2">
+    <ul class="center">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="inscription.html">Inscription</a></li>
+      <li><a href="connexion.html">Connexion</a></li>
+      <li><a href="rechercher.html">Rechercher</a></li>
+    </ul>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
