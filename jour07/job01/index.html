@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mon Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="#">Inscription</a></li>
+        <li><a href="#">Connexion</a></li>
+        <li><a href="#">Rechercher</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Formulaire de création de compte</h1>
+    <form>
+      <label for="civilite">Civilité:</label>
+      <input type="radio" id="civilite-mr" name="civilite" value="M.">
+      <label for="civilite-mr">M.</label>
+      <input type="radio" id="civilite-mme" name="civilite" value="Mme.">
+      <label for="civilite-mme">Mme.</label>
+
+      <label for="prenom">Prénom:</label>
+      <input type="text" id="prenom" name="prenom">
+
+      <label for="nom">Nom:</label>
+      <input type="text" id="nom" name="nom">
+
+      <label for="adresse">Adresse:</label>
+      <input type="text" id="adresse" name="adresse">
+
+      <label for="email">Adresse email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="password">Mot de passe:</label>
+      <input type="password" id="password" name="password">
+
+      <label for="password-confirm">Confirmer le mot de passe:</label>
+      <input type="password" id="password-confirm" name="password-confirm">
+
+      <label for="passions">Passions:</label>
+      <input type="checkbox" id="passion-informatique" name="passions" value="informatique">
+      <label for="passion-informatique">Informatique</label>
+      <input type="checkbox" id="passion-voyages" name="passions" value="voyages">
+      <label for="passion-voyages">Voyages</label>
+      <input type="checkbox" id="passion-sport" name="passions" value="sport">
+      <label for="passion-sport">Sport</label>
+      <input type="checkbox" id="passion-lecture" name="passions" value="lecture">
+      <label for="passion-lecture">Lecture</label>
+
+      <button type="submit">Valider</button>
+    </form>
+  </section>
+
+  <footer>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="#">Inscription</a></li>
+      <li><a href="#">Connexion</a></li>
+      <li><a href="#">Rechercher</a></li>
+    </ul>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
+
